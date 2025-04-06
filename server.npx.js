@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+// server.npx.js
 import dotenv from 'dotenv';
 dotenv.config();
 
