@@ -9,11 +9,17 @@ const args = process.argv.slice(2);
 const userArg = args.find(arg => arg.startsWith('--user='))?.split('=')[1];
 const keyArg = args.find(arg => arg.startsWith('--apiKey='))?.split('=')[1];
 
+// Definer forventede verdier direkte
+const EXPECTED_USER = 'dingemoe';
+const EXPECTED_API_KEY = 'a93b48fa13e8bd7e243fabecf3b4a62e';
+
+// Bruk miljøvariabler hvis tilgjengelig, ellers bruk argumenter
 const user = userArg || process.env.USER;
 const apiKey = keyArg || process.env.API_KEY;
 const PORT = parseInt(process.env.PORT || '3000', 10);
 
-if (!user || !apiKey || user !== process.env.USER || apiKey !== process.env.API_KEY) {
+// Endre valideringslogikk til å sjekke mot forventede verdier
+if (!user || !apiKey || (user !== EXPECTED_USER) || (apiKey !== EXPECTED_API_KEY)) {
   console.error('❌ Feil brukernavn eller API-nøkkel');
   process.exit(1);
 }
