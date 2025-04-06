@@ -1,19 +1,15 @@
 {
   "name": "pushpin-npx-server",
   "version": "1.0.0",
-  "description": "WebSocket-server med auth, klar for bruk med npx",
   "type": "module",
-  "main": "server.local.js",
   "bin": {
     "pushpin-npx-server": "./server.npx.js"
   },
   "scripts": {
     "start": "node server.local.js"
   },
-  "author": "dingemoe",
-  "license": "MIT",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "ws": "^8.18.1"
+    "ws": "^8.13.0"
   }
 }

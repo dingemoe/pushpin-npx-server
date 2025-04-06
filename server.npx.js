@@ -1,5 +1,5 @@
-// server.npx.js
-import dotenv from 'dotenv';
-dotenv.config();
+#!/usr/bin/env node
+import dotenv from 'dotenv'
+dotenv.config()
 
-import './server.js';
+import './server.js'
