@@ -2,4 +2,4 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-import './server.js' assert { type: 'module' };
+import './server.js';
